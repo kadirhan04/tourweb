@@ -1,0 +1,242 @@
+/*css sıfırlama*/
+*{
+    /*margin: 0;
+    padding: 0;*/
+    
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --main-color:#ffa343;
+    --text-color:#f3efef;
+    --bg-color:rgb(20, 19, 19);
+
+/*yazı boyut*/
+--h1-font:6rem;
+--h2-font :2rem;
+--p-font:1rem;
+/*animasyon*/
+--transition: all .5s ease;
+    
+}
+body{
+    background-color: var(--bg-color);
+    color:var(--text-color);
+    overflow-x:hidden;
+}/*ortak yapılar*/
+.button{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    padding: 15px 40px;
+    display: inline-block;
+}
+.button:hover{
+    transform: translate(10px);
+    background-color: transparent;
+    border:2px solid var(--text-color);
+    transition: all.3s ease;
+
+}
+.main-text{
+    color:var(--main-color);
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 6px;
+    
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    z-index: 1000;
+    backdrop-filter: blur(30px);
+    align-items: center;
+    position: fixed;
+    top:0;
+    right:0;
+    flex-wrap: wrap;
+    
+    
+}
+.logo{
+    color: var(--text-color);
+    font-size: 40px;
+    font-weight: 700;
+}
+.logo span{
+    color: var(--main-color);
+}
+.navbar{
+    display: flex;
+    gap: 20px;
+}
+.navbar a{
+    color: var(--text-color);
+    margin: 15px 0px;;
+    font-weight: 600;
+    font-size: var(--p-font);
+    transition: var(--transition)
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.header-right{
+    display: flex;
+    gap: 15px;
+}
+.header-right a{
+    color: var(--text-color);
+    transition: var(--transition);
+    font-size: 20px;
+
+}
+.header-right a:hover{
+    color: var(--main-color);
+    transform:translateY(-5px) ;
+}
+/*banner alanı*/
+.home{
+    
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.3)
+        ),
+        url(Background.png);
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-position: relative;
+        align-items:flex-start;
+        padding: 80px; 
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+        
+}
+.home-text{
+    margin-top: 80px;
+    margin-left: 15px;
+}
+
+.home-text h1{
+    font-size:80px;
+    font-weight: 800;
+    line-height: 0.8;
+    margin-bottom: 20px;
+}
+.home-text p{
+    font-size: var(--p-font);
+    color:#979797;
+    font-weight: 500;
+}
+@media(max-width: 700px) {
+    :root{
+        --h1-font:2rem;
+        --h2-font:2rem;
+        --p-font:15px;
+    }
+    .holiday{
+        grid-template-columns: 1fr;
+    }
+}
+.holiday{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   gap: 10rem;
+   align-items: center;
+   padding: 15px 20px;
+
+
+}
+.holiday-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+}
+.holiday-text{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+}
+/*tour alan*/
+.tour h2{
+    text-align: center;
+    font-size: var(--h2-font);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(70%);
+    object-fit: cover;
+    border-radius: 10px;
+}
+.tour-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    gap: 3rem;
+}
+.center-button{
+margin-top: 6rem;
+text-align: center;
+
+
+}
+.box img:hover{
+filter: brightness(90%) hue-rotate(40deg);
+}
+.box{
+    position: relative;
+}
+.box h6{
+    position: absolute;
+    font-size: 20px;
+    bottom: 90px;
+    left: 25px;
+}
+.box h4{
+    position: absolute;
+    font-size: 25px;
+    bottom: 45px;
+    left: 25px;
+}/*footer*/
+footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+    margin-top: 20px;
+}
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.footer-col a{
+color: rgb(245, 236, 220);
+transition: var(--transition);
+
+}
+.footer-col a:hover{
+    transform: translateX(-5px);
+    color:var(--text-color)
+}
+.social a{
+  display: inline-flex;  
+  width: 45px;
+  height: 45px;
+  background-color:rgb(53, 52, 52) ;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 10px;
+}
